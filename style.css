@@ -1,0 +1,129 @@
+.dws-wrapper {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+.container-image {
+	min-width: 1200px;
+	height: 500px;
+	display: flex;
+	border: 1px solid #d6d6d6;
+	padding: 20px;
+}
+.img-box {
+	flex-grow: 1;
+	background-size: 750px 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: 1s;
+	filter: grayscale(1);
+	opacity: .8;
+	position: relative;
+	overflow: hidden;
+}
+.img-box:hover {
+	background-size: 900px 600px;
+	flex-grow: 5;
+	filter: grayscale(0);
+	opacity: 1;
+}
+.bor-left-right::before,
+.bor-top-bottom::before,
+.bor-left-right::after,
+.bor-top-bottom::after {
+	content: '';
+	position: absolute;
+	background-color: white;
+	opacity: .3;
+	transition: 1s;
+}
+.bor-left-right::before {
+	width: 1px;
+	height: 100%;
+	top: 0;
+	left: 10px;
+}
+.bor-top-bottom::before {
+	width: 100%;
+	height: 1px;
+	top: 10px;
+	left: 0;
+}
+.bor-left-right::after {
+	width: 1px;
+	height: 100%;
+	bottom: 0;
+	right: 10px;
+}
+.bor-top-bottom::after {
+	width: 100%;
+	height: 1px;
+	bottom: 10px;
+	right: 0;
+}
+.img-box:hover .bor-left-right::before,
+.img-box:hover .bor-left-right::after,
+.img-box:hover .bor-top-bottom::before,
+.img-box:hover .bor-top-bottom::after {
+	transition: 1s;
+	opacity: .8;
+	transition-delay: 0.3s;
+}
+
+.img-box:hover .bor-left-right::after {
+	transform: translateY(-100%);
+}
+.img-box:hover .bor-left-right::before {
+	transform: translateY(100%);
+}
+.img-box:hover .bor-top-bottom::before {
+	transform: translateX(100%);
+}
+.img-box:hover .bor-top-bottom::after {
+	transform: translateX(-100%);
+}
+.content {
+	color: white;
+	background-color: black;
+	opacity: .7;
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	width: 70%;
+	text-align: justify;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	padding: 15px;
+	box-sizing: border-box;
+	word-break: break-all;
+	-webkit-transform: translateY(120%);
+	-moz-transform: translateY(120%);
+	-ms-transform: translateY(120%);
+	-o-transform: translateY(120%);
+	transform: translateY(120%);
+	transition: 0.5s;
+}
+.img-box:hover .content {
+	transform: translateY(0);
+	transition-delay: 0.5s;
+}
+.content h2 {
+	margin: 0 0 5px;
+	padding: 0;
+	text-transform: uppercase;
+	font-size: 26px;
+	color: #4cdde5;
+}
+.content p {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
